@@ -1,5 +1,5 @@
 import { Placeholder } from './types';
-import { sprintf } from 'sprintf';
+import { sprintf } from 'sprintf-js';
 import { v5 } from 'uuid';
 
 type Uuid = string;

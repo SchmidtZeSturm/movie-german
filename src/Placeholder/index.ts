@@ -1,2 +1,2 @@
-export { Placeholder, Replacer } from './types';
+export { Placeholder } from './types';
 export { SimplePlaceholder } from './SimplePlaceholder';

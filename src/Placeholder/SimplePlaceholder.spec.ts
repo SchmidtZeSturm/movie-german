@@ -1,6 +1,6 @@
 import  { describe, expect, test } from '@jest/globals';
 import { SimplePlaceholder } from './SimplePlaceholder';
-import { sprintf } from 'sprintf';
+import { sprintf } from 'sprintf-js';
 import { v5 } from 'uuid';
 
 describe('SimplePlaceholder tests', () => {
