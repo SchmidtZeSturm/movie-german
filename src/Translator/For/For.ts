@@ -1,4 +1,4 @@
-import { Translator } from "~/Translator/Translator";
+import { Translator } from "~/Translator/types";
 import { Placeholder } from "~/Placeholder";
 import { CaseMatcher } from "~/CaseMatcher";
 

@@ -1,4 +1,4 @@
-import { Translator } from './Translator';
+import { Translator } from './types';
 import { And } from './And';
 import { For } from './For';
 import { Good } from './Good';

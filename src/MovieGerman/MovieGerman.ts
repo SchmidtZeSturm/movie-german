@@ -1,22 +1,13 @@
-import { Translator } from "~/Translator";
 import { Placeholder } from "~/Placeholder/types";
+import { TranslatorContainer } from "~/TranslatorContainer/types";
 
-export class MovieGerman
-{
-  private readonly translators: Set<Translator>;
-
-  constructor(private readonly placeholder: Placeholder, ...translators: Translator[]) {
-    this.translators = new Set<Translator>();
-
-    translators.forEach((translator) => {
-      this.translators.add(translator);
-    });
-  }
+export class MovieGerman {
+  constructor(private readonly placeholder: Placeholder, private readonly translators: TranslatorContainer) {}
 
   public translateZis(text: string): string {
-    this.translators.forEach((translator) => {
+    for (const translator of this.translators.getTranslators()) {
       text = translator.translate(text);
-    });
+    }
 
     return this.placeholder.replace(text);
   }

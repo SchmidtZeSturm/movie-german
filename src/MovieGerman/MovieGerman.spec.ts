@@ -12,23 +12,16 @@ import { Th } from "~/Translator/Th/Th";
 import { Under } from '~/Translator/Under';
 import { W } from "~/Translator/W/W";
 import { Yes } from "~/Translator/Yes/Yes";
+import { SimpleContainer } from "../TranslatorContainer/SimpleContainer";
 
 describe('Zis is ze main translator ja?', () => {
   const placeholder = new SimplePlaceholder();
   const caseMatcher = new CaseMatcher();
   test('It translates the text', () => {
+    const simpleContainer = new SimpleContainer(placeholder, caseMatcher);
     const movieGerman = new MovieGerman(
       placeholder,
-      new And(placeholder, caseMatcher),
-      new For(placeholder, caseMatcher),
-      new Good(placeholder, caseMatcher),
-      new My(placeholder, caseMatcher),
-      new No(placeholder, caseMatcher),
-      new Qu(placeholder, caseMatcher),
-      new Th(placeholder, caseMatcher),
-      new Under(placeholder, caseMatcher),
-      new W(placeholder, caseMatcher),
-      new Yes(placeholder, caseMatcher)
+      simpleContainer
     );
 
     const original = 'No hand wringing on this, we must be good. When we write words who shall hear them and how shall they understand, yes?';

@@ -1,8 +1,8 @@
-import { Translator } from "~/Translator/Translator";
+import { Types } from "~/Translator/types";
 import { Placeholder } from "~/Placeholder";
 import { CaseMatcher } from "~/CaseMatcher";
 
-export class And implements Translator {
+export class And implements Types {
   public static readonly REGEX = /\band\b/ig;
 
   constructor(private readonly placeholder: Placeholder, private readonly caseMatcher: CaseMatcher) {}
